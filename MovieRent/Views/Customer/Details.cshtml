@@ -1,0 +1,21 @@
+﻿@model MovieRent.Models.Customer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@Html.DisplayFor(model => model.Name)</h2>
+
+<ul>
+    <li>Membership Type: @Html.DisplayFor(model => model.Membership.Name)</li>
+    @if (Model.DOB != null)
+    {
+        <li>BirthDate: @Html.DisplayFor(model => model.DOB)</li>
+    }
+</ul>
+
+@* DisplayNameFor = Display key *@
+@* DisplayFor = Display Value *@
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
